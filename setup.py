@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='BBCHeadlines',
-    version='1',
+    version='2',
     author='GadhaGod',
     author_email='gadhaguy13@gmail.com',
     description='A python package to get news from BBC.',

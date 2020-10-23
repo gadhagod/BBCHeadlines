@@ -7,20 +7,22 @@ def setup():
         list.append(entries[i])
     return(list)
 
+set = setup()
+
 def title():
     list = []
-    for i in range (len(setup())):
-        list.append((setup()[i]['title']))
+    for i in range (len(set)):
+        list.append((set[i]['title']))
     return(list)
 
 def description():
     list = []
-    for i in range (len(setup())):
-        list.append((setup()[i]['summary']))
+    for i in range (len(set)):
+        list.append((set[i]['summary']))
     return(list)
 
 def link():
     list = []
-    for i in range (len(setup())):
-        list.append((setup()[i]['links'][0]['href']))
+    for i in range (len(set)):
+        list.append((set[i]['links'][0]['href']))
     return(list)
