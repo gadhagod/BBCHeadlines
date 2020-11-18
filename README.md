@@ -1,4 +1,4 @@
-# BBCHeadlines
+# BBCNews
 A python package to get news from BBC.
 
 ### Installation
@@ -6,37 +6,52 @@ A python package to get news from BBC.
     pip3 install BBCHeadlines
 
 ### Usage
-Print headlines:
- 
-    # Import BBCHeadlines
-    from BBCHeadlines import articles
+Get all top articles of right now:
 
-    # Print the title of article #article_num five times. article_num increases by one every time the loop is increased, starting at zero.
-    for article_num in range (5):
-        print(articles.title()[article_num])
-Print info on first article:
-    
-    # Import library
-    from BBCHeadlines import articles
-    # We'll get info on the first article
-    article_num = 0
+    from BBCHeadlines import news
+    print(news())
 
-    # Print article title
-    print('Title: ' + articles.title()[article_num])
-    # Print article description
-    print('Description: ' + articles.description()[article_num])
-    # Print article link
-    print('Link: ' + articles.link()[article_num])
-We can put this into a loop to get headlines with info on the articles:
+Get the top article:
 
-    # Import library
-    from BBCHeadlines import articles
+    print(news(limit=1))
 
-    # Print info on article #article_num five times. article_num increases by one every time the loop is increased, starting at zero.
-    for article_num in range (5):
-        # Print article title
-        print('Title: ' + articles.title()[article_num])
-        # Print article description
-        print('Description: ' + articles.description()[article_num])
-        # Print article link
-        print('Link: ' + articles.link()[article_num])
+Sample response:
+
+    [
+        {
+            "title":"US election: Trump campaign seeks partial recount in Wisconsin",
+            "title_detail":{
+                "type":"text/plain",
+                "language":"None",
+                "base":"http://feeds.bbci.co.uk/news/world/rss.xml",
+                "value":"US election: Trump campaign seeks partial recount in Wisconsin"
+            },
+            "summary":"Two counties will be asked to recount votes as Donald Trump continues to contest the election result.",
+            "summary_detail":{
+                "type":"text/html",
+                "language":"None",
+                "base":"http://feeds.bbci.co.uk/news/world/rss.xml",
+                "value":"Two counties will be asked to recount votes as Donald Trump continues to contest the election result."
+            },
+            "links":[
+                {
+                    "rel":"alternate",
+                    "type":"text/html",
+                    "href":"https://www.bbc.co.uk/news/world-us-canada-54994212"
+                }
+            ],
+            "link":"https://www.bbc.co.uk/news/world-us-canada-54994212",
+            "id":"https://www.bbc.co.uk/news/world-us-canada-54994212",
+            "guidislink":False,
+            "published":"Wed, 18 Nov 2020 18:40:53 GMT",
+            "published_parsed":time.struct_time(tm_year=2020,
+            tm_mon=11,
+            tm_mday=18,
+            tm_hour=18,
+            tm_min=40,
+            tm_sec=53,
+            tm_wday=2,
+            tm_yday=323,
+            tm_isdst=0)
+        }
+    ]
