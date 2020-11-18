@@ -1,4 +1,4 @@
-# BBCNews
+# BBCHeadlines
 A python package to get news from BBC.
 
 ### Installation
