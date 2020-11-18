@@ -6,6 +6,3 @@ def news(limit=False):
         return(entries[:limit])
     else:
         return(entries)
-
-print(
-    len(news()))
