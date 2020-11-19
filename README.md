@@ -1,6 +1,9 @@
 # BBCHeadlines
 A python package to get news from BBC.
 
+# Depreciate
+This library is no longer maintained and won't see any new changes. It's become a part of the library [bbc-feeds](https://github.com/gadhagod/bbc-feeds), which has much more features. Please use that package instead of this.
+
 ### Installation
 
     pip3 install BBCHeadlines
